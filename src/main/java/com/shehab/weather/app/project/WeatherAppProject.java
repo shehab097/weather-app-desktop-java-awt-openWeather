@@ -10,8 +10,8 @@ import com.mashape.unirest.http.exceptions.UnirestException;
 
 import model.WeatherData;
 import gui.WeatherDIsplay;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+// import java.util.logging.Level;
+// import java.util.logging.Logger;
 
 import javax.swing.JOptionPane;
 
@@ -35,7 +35,7 @@ public class WeatherAppProject {
             String url = "https://api.openweathermap.org/data/2.5/weather?q=" + cityName
                     + "+&appid=907e91122aea5cf6a934d1036ee644d1&units=metric";
 
-            System.out.println(url);
+            // System.out.println(url);
             HttpResponse<String> response = Unirest.get(url)
                     .header("Content-Type", "application/json")
                     .asString();

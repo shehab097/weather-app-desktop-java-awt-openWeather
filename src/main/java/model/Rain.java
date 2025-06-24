@@ -20,15 +20,12 @@ public class Rain {
         // Default constructor needed for Jackson
     }
 
-    // public Rain(Double last1Hour) {
-    //     this.last1Hour = last1Hour;
-    // }
 
     public Double getLast1Hour() {
 
-        // if (last1Hour == null) {
-        //     return 0.0; // Return 0 if no data is available
-        // }
+        if (last1Hour == null) {
+            return 0.0; // Return 0 if no data is available
+        }
         return last1Hour;
     }
 
