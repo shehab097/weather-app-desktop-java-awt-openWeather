@@ -8,8 +8,8 @@ import com.mashape.unirest.http.HttpResponse;
 import com.mashape.unirest.http.Unirest;
 import com.mashape.unirest.http.exceptions.UnirestException;
 
-import model.WeatherData;
-import gui.WeatherDIsplay;
+import com.shehab.weather.app.project.model.WeatherData;
+import com.shehab.weather.app.project.gui.WeatherDIsplay;
 // import java.util.logging.Level;
 // import java.util.logging.Logger;
 
