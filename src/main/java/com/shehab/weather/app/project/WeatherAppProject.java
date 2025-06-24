@@ -23,10 +23,6 @@ public class WeatherAppProject {
         city = "dhaka";
     }
 
-    // public WeatherAppProject(String cityName) {
-    // city = cityName;
-    // }
-
     public void start(String cityName) {
         try {
 
@@ -83,32 +79,5 @@ public class WeatherAppProject {
         WeatherAppProject weatherAppProject = new WeatherAppProject();
         weatherAppProject.start(weatherAppProject.city);
 
-        // try {
-        // WeatherData weatherData = new WeatherData();
-        // String url = "https://api.openweathermap.org/data/2.5/weather?q=" + new
-        // WeatherAppProject().city +
-        // "+&appid=907e91122aea5cf6a934d1036ee644d1&units=metric";
-        // System.out.println(url);
-        // HttpResponse<String> response = Unirest.get(url)
-        // .header("Content-Type", "application/json")
-        // .asString();
-        // ObjectMapper mapper = new ObjectMapper();
-        // if (response.getStatus() == 200) {
-        // String responseBody = response.getBody();
-        // try {
-        // weatherData = mapper.readValue(responseBody, WeatherData.class);
-        // } catch (Exception e) {
-        // System.out.println("Cannt convert to json" + e);
-        // }
-        // } else {
-        // System.out.println("API fetching failed");
-        // }
-        // WeatherDIsplay wdi = new WeatherDIsplay(weatherData);
-        // wdi.setVisible(true);
-        // // System.out.println(weatherData);
-        // } catch (UnirestException ex) {
-        // Logger.getLogger(WeatherAppProject.class.getName()).log(Level.SEVERE, null,
-        // ex);
-        // }
     }
 }
