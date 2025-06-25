@@ -29,6 +29,7 @@ public class WeatherDIsplay extends javax.swing.JFrame {
 
     public WeatherDIsplay(WeatherData weatherData) {
         this.weatherData = weatherData;
+        this.setTitle("Weather Data for " + weatherData.getName() + " | " + weatherData.getSys().getCountry());
         initComponents(); // ✅ Add this line to build the GUI
     }
 
@@ -126,7 +127,7 @@ public class WeatherDIsplay extends javax.swing.JFrame {
         jPanel2.setBackground(new java.awt.Color(0, 0, 255));
 
         city_name.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        city_name.setText("Dhaka");
+        city_name.setText(weatherData.getName() + "");
         city_name.setBorder(null);
         city_name.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -182,11 +183,11 @@ public class WeatherDIsplay extends javax.swing.JFrame {
 
         dataTempLow.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         dataTempLow.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        dataTempLow.setText("Low: "+weatherData.getMain().getTemp_min());
+        dataTempLow.setText("Low: "+Math.floor(weatherData.getMain().getTemp_min()));
 
         dataTempHigh.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         dataTempHigh.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        dataTempHigh.setText("High: " +weatherData.getMain().getTemp_max());
+        dataTempHigh.setText("High: " +Math.ceil(weatherData.getMain().getTemp_max()));
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);

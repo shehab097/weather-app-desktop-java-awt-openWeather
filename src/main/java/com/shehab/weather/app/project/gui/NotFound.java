@@ -2,7 +2,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package com.shehab.weather.app.project;
+package com.shehab.weather.app.project.gui;
+
+import com.shehab.weather.app.project.WeatherAppProject;
 
 /**
  *
@@ -37,7 +39,7 @@ public class NotFound extends javax.swing.JFrame {
         jLabel2.setText("Please, check spelling or enter a valid name");
 
         inpSearch.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        inpSearch.setText("gh");
+        inpSearch.setText("");
         inpSearch.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 102)));
         inpSearch.setMargin(new java.awt.Insets(4, 12, 4, 12));
         inpSearch.addActionListener(new java.awt.event.ActionListener() {
@@ -55,7 +57,7 @@ public class NotFound extends javax.swing.JFrame {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 setVisible(false);
                 WeatherAppProject weatherAppProject = new WeatherAppProject();
-                String cityName = inpSearch.getText().trim();
+                String cityName = inpSearch.getText().trim().toLowerCase();
                 if (!cityName.isEmpty()) {
                     weatherAppProject.start(cityName);
                 } 
