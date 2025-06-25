@@ -6,6 +6,8 @@ package com.shehab.weather.app.project.gui;
 
 import com.shehab.weather.app.project.WeatherAppProject;
 
+import javax.swing.*;
+
 /**
  *
  * @author sheha
@@ -27,6 +29,16 @@ public class NotFound extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         inpSearch = new javax.swing.JTextField();
         btnSearch = new javax.swing.JButton();
+
+        // Set the icon for the JFrame
+        try{
+            ImageIcon icon = new ImageIcon(getClass().getResource("/com/shehab/weather/app/project/gui/icon.png"));
+            setIconImage(icon.getImage());
+            setTitle("Weather App - Not Found");
+
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, "Error loading icon: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+        }
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 

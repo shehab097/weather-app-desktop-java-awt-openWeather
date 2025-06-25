@@ -9,7 +9,7 @@ import com.shehab.weather.app.project.model.WeatherData;
 import com.shehab.weather.app.project.tools.UnitConverter;
 import java.time.Clock;
 
-import javax.swing.JOptionPane;
+import javax.swing.*;
 
 /**
  *
@@ -27,11 +27,14 @@ public class WeatherDIsplay extends javax.swing.JFrame {
     private WeatherData weatherData;
     UnitConverter timeConverter;
 
+
+
     public WeatherDIsplay(WeatherData weatherData) {
         this.weatherData = weatherData;
         this.setTitle("Weather Data for " + weatherData.getName() + " | " + weatherData.getSys().getCountry());
         initComponents(); // ✅ Add this line to build the GUI
     }
+
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -99,6 +102,15 @@ public class WeatherDIsplay extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
+
+        // set image icon
+        try{
+            ImageIcon icon = new ImageIcon(getClass().getResource("/com/shehab/weather/app/project/gui/icon.png"));
+            setIconImage(icon.getImage());
+
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, "Error loading icon: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+        }
 
         jPanel1.setBackground(new java.awt.Color(51, 51, 255));
 
