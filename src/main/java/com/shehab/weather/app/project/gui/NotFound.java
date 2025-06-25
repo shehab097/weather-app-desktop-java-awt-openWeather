@@ -42,14 +42,18 @@ public class NotFound extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        assert jPanel1 != null;
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
+        assert jLabel1 != null;
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 51, 0));
         jLabel1.setText("Weather Data Not Found!");
 
+        assert jLabel2 != null;
         jLabel2.setText("Please, check spelling or enter a valid name");
 
+        assert inpSearch != null;
         inpSearch.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         inpSearch.setText("");
         inpSearch.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 102)));
@@ -60,6 +64,7 @@ public class NotFound extends javax.swing.JFrame {
             }
         });
 
+        assert btnSearch != null;
         btnSearch.setBackground(new java.awt.Color(0, 102, 102));
         btnSearch.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnSearch.setForeground(new java.awt.Color(153, 255, 204));
@@ -121,45 +126,12 @@ public class NotFound extends javax.swing.JFrame {
 
     private void inpSearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inpSearchActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_inpSearchActionPerformed
+    }
 
-    /**
-     * @param args the command line arguments
-     */
 
-    // public static void main(String args[]) {
-    //     /* Set the Nimbus look and feel */
-    //     //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-    //     /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-    //      * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-    //      */
-    //     try {
-    //         for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-    //             if ("Nimbus".equals(info.getName())) {
-    //                 javax.swing.UIManager.setLookAndFeel(info.getClassName());
-    //                 break;
-    //             }
-    //         }
-    //     } catch (ClassNotFoundException ex) {
-    //         java.util.logging.Logger.getLogger(NotFound.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-    //     } catch (InstantiationException ex) {
-    //         java.util.logging.Logger.getLogger(NotFound.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-    //     } catch (IllegalAccessException ex) {
-    //         java.util.logging.Logger.getLogger(NotFound.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-    //     } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-    //         java.util.logging.Logger.getLogger(NotFound.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-    //     }
-    //     //</editor-fold>
 
-    //     /* Create and display the form */
-    //     java.awt.EventQueue.invokeLater(new Runnable() {
-    //         public void run() {
-    //             new NotFound().setVisible(true);
-    //         }
-    //     });
-    // }
 
-    // Variables declaration - do not modify//GEN-BEGIN:variables
+    // Variables declaration
     private javax.swing.JButton btnSearch;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
