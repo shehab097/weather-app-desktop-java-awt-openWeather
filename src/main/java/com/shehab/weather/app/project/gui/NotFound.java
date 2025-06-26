@@ -40,6 +40,7 @@ public class NotFound extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, "Error loading icon: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
         }
 
+        setTitle("Weather App - Not Found");
         setDefaultCloseOperation(this.EXIT_ON_CLOSE);
 
         assert jPanel1 != null;
@@ -75,9 +76,7 @@ public class NotFound extends javax.swing.JFrame {
                 setVisible(false);
                 WeatherAppProject weatherAppProject = new WeatherAppProject();
                 String cityName = inpSearch.getText().trim().toLowerCase();
-                if (!cityName.isEmpty()) {
-                    weatherAppProject.start(TextFormating.removeSpaces(cityName));
-                } 
+                weatherAppProject.start(TextFormating.removeSpaces(cityName));
             }
         });
 

@@ -4,8 +4,8 @@ public class TextFormating {
 
     // replace space by "%20"
     public static String removeSpaces(String text) {
-        if (text == null || text.isEmpty()) {
-            return text;
+        if (text == null || text.trim().isEmpty()) {
+            return "%20";
         }
         return text.replace(" ", "%20");
     }
