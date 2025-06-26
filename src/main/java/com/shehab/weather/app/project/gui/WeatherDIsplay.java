@@ -6,6 +6,7 @@ package com.shehab.weather.app.project.gui;
 
 import com.shehab.weather.app.project.WeatherAppProject;
 import com.shehab.weather.app.project.model.WeatherData;
+import com.shehab.weather.app.project.tools.TextFormating;
 import com.shehab.weather.app.project.tools.UnitConverter;
 import java.time.Clock;
 
@@ -88,12 +89,12 @@ public class WeatherDIsplay extends javax.swing.JFrame {
         lblPressure = new javax.swing.JLabel();
         dataPressure = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
         setResizable(false);
 
         // set image icon
         try{
-            ImageIcon icon = new ImageIcon(getClass().getResource("/com/shehab/weather/app/project/gui/icon.png"));
+            ImageIcon icon = new ImageIcon(WeatherAppProject.class.getResource("/images/icon.png"));
             setIconImage(icon.getImage());
 
         } catch (Exception e) {
@@ -765,7 +766,7 @@ public class WeatherDIsplay extends javax.swing.JFrame {
         // TODO add your handling code here:
         this.setVisible(false);
         WeatherAppProject weatherAppProject = new WeatherAppProject();
-        weatherAppProject.start(city_name.getText().trim());
+        weatherAppProject.start(TextFormating.removeSpaces(city_name.getText().trim()));
 
     }
 

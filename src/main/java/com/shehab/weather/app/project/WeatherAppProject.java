@@ -14,7 +14,7 @@ import com.shehab.weather.app.project.gui.WeatherDIsplay;
 // import java.util.logging.Level;
 // import java.util.logging.Logger;
 
-import javax.swing.JOptionPane;
+import javax.swing.*;
 
 public class WeatherAppProject {
 
@@ -33,6 +33,8 @@ public class WeatherAppProject {
                     + "+&appid=907e91122aea5cf6a934d1036ee644d1&units=metric";
 
             // System.out.println(url);
+
+
             HttpResponse<String> response = Unirest.get(url)
                     .header("Content-Type", "application/json")
                     .asString();
@@ -48,7 +50,7 @@ public class WeatherAppProject {
                     WeatherDIsplay wdi = new WeatherDIsplay(weatherData);
                     wdi.setVisible(true);
                     wdi.setLocationRelativeTo(null); // Center the window
-                    wdi.setDefaultCloseOperation(WeatherDIsplay.DISPOSE_ON_CLOSE);
+                    wdi.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
                 } catch (Exception e) {
                     new JOptionPane();
@@ -64,7 +66,7 @@ public class WeatherAppProject {
                 NotFound notFound = new NotFound();
                 notFound.setVisible(true);
                 notFound.setLocationRelativeTo(null); // Center the window
-                notFound.setDefaultCloseOperation(NotFound.DISPOSE_ON_CLOSE);
+                notFound.setDefaultCloseOperation(NotFound.EXIT_ON_CLOSE);
 
             }
 
@@ -72,6 +74,9 @@ public class WeatherAppProject {
 
         } catch (UnirestException ex) {
             System.out.println("Error fetching weather data: " + ex.getMessage());
+            JOptionPane.showMessageDialog(null,
+                    "Error fetching weather data. Please check your internet connection or try again later.",
+                    "Network Error", JOptionPane.ERROR_MESSAGE);
         }
     }
 

@@ -5,6 +5,7 @@
 package com.shehab.weather.app.project.gui;
 
 import com.shehab.weather.app.project.WeatherAppProject;
+import com.shehab.weather.app.project.tools.TextFormating;
 
 import javax.swing.*;
 
@@ -32,15 +33,14 @@ public class NotFound extends javax.swing.JFrame {
 
         // Set the icon for the JFrame
         try{
-            ImageIcon icon = new ImageIcon(getClass().getResource("/com/shehab/weather/app/project/gui/icon.png"));
+            ImageIcon icon = new ImageIcon(WeatherAppProject.class.getResource("/images/icon.png"));
             setIconImage(icon.getImage());
-            setTitle("Weather App - Not Found");
 
         } catch (Exception e) {
             JOptionPane.showMessageDialog(this, "Error loading icon: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
         }
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(this.EXIT_ON_CLOSE);
 
         assert jPanel1 != null;
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
@@ -76,7 +76,7 @@ public class NotFound extends javax.swing.JFrame {
                 WeatherAppProject weatherAppProject = new WeatherAppProject();
                 String cityName = inpSearch.getText().trim().toLowerCase();
                 if (!cityName.isEmpty()) {
-                    weatherAppProject.start(cityName);
+                    weatherAppProject.start(TextFormating.removeSpaces(cityName));
                 } 
             }
         });
