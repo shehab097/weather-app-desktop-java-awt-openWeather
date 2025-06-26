@@ -184,11 +184,11 @@ public class WeatherDIsplay extends javax.swing.JFrame {
 
         dataTempLow.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         dataTempLow.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        dataTempLow.setText("Low: "+Math.floor(weatherData.getMain().getTemp_min()));
+        dataTempLow.setText("Low: "+(int)Math.floor(weatherData.getMain().getTemp_min()));
 
         dataTempHigh.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         dataTempHigh.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        dataTempHigh.setText("High: " +Math.ceil(weatherData.getMain().getTemp_max()));
+        dataTempHigh.setText("High: " + (int)Math.ceil(weatherData.getMain().getTemp_max()));
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
