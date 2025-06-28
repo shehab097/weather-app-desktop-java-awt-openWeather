@@ -33,7 +33,7 @@ public class WeatherAppProject {
             WeatherData weatherData = new WeatherData();
 
             String url = "https://api.openweathermap.org/data/2.5/weather?q=" + cityName
-                    + "+&appid=907e91122aea5cf6a934d1036ee644d1&units=metric";
+                    + "+&appid=YOUR_API_KEY&units=metric";
 
             System.out.println(url);
             HttpResponse<String> response = Unirest.get(url)
